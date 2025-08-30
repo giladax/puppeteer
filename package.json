@@ -4,7 +4,12 @@
   "description": "Production-grade focused logger for Puppeteer with JSDoc integration",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "bin": {
+    "puppeteer-cli": "dist/puppeteer-cli/index.js"
+  },
+  "files": [
+    "dist"
+  ],
   "engines": {
     "node": ">=18.0.0"
   },
@@ -20,15 +25,22 @@
     "format": "prettier --write src/**/*.ts",
     "format:check": "prettier --check src/**/*.ts",
     "typecheck": "tsc --noEmit",
-    "ci": "npm run typecheck && npm run lint && npm run test"
+    "ci": "npm run typecheck && npm run lint && npm run test",
+    "cli": "npm run build && node dist/puppeteer-cli/index.js"
   },
-  "keywords": ["puppeteer", "logging", "pino", "typescript"],
+  "keywords": [
+    "puppeteer",
+    "logging",
+    "pino",
+    "typescript"
+  ],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
     "pino": "^9.9.0",
-    "source-map-support": "^0.5.21"
+    "source-map-support": "^0.5.21",
+    "zod": "4.1.5"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",

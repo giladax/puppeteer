@@ -1,0 +1,50 @@
+{"level":30,"time":1756537974997,"pid":28727,"hostname":"Gilads-MacBook-Air.local","ts":"2025-08-30T07:12:54.995Z","level":"info","service":"Puppeteer","event":"cli.start","runId":"puppeteer_cli_1756537974995","model":"claude-sonnet-4","sessionId":"cli_session_1756537974995","tags":["puppeteer-cli","automation","analysis"],"file":"/Users/giladkoch/Documents/Dev/puppeteer/dist/puppeteer-cli/index.js","line":144,"column":5,"command":"analyze","target":"logs"}
+{
+  "iterations": 3,
+  "allFeatures": [
+    "add",
+    "subtract",
+    "statistics"
+  ],
+  "allOperations": [
+    "math.add.start",
+    "math.validation.start",
+    "math.validation.success",
+    "math.add.complete",
+    "math.subtract.start",
+    "math.subtract.complete"
+  ],
+  "suggestedNextFeatures": [
+    "variance",
+    "median"
+  ],
+  "evolutionPath": [
+    {
+      "id": "iteration_001_add_only",
+      "features": [
+        "add"
+      ]
+    },
+    {
+      "id": "iteration_002_add_subtract",
+      "features": [
+        "add",
+        "subtract"
+      ]
+    },
+    {
+      "id": "iteration_003_statistics",
+      "features": [
+        "add",
+        "subtract",
+        "statistics"
+      ]
+    }
+  ]
+}
+{"level":30,"time":1756537974997,"pid":28727,"hostname":"Gilads-MacBook-Air.local","ts":"2025-08-30T07:12:54.997Z","level":"info","service":"Puppeteer","event":"analysis.start","runId":"puppeteer_cli_1756537974995","model":"claude-sonnet-4","sessionId":"cli_session_1756537974995","tags":["puppeteer-cli","automation","analysis"],"functionName":"main","file":"/Users/giladkoch/Documents/Dev/puppeteer/dist/puppeteer-cli/index.js","line":24,"column":13,"desc":"CLI orchestrator that analyzes logs and plans next iterations","logsDir":"logs"}
+{"level":30,"time":1756537974998,"pid":28727,"hostname":"Gilads-MacBook-Air.local","ts":"2025-08-30T07:12:54.998Z","level":"info","service":"Puppeteer","event":"analysis.iteration.complete","runId":"puppeteer_cli_1756537974995","model":"claude-sonnet-4","sessionId":"cli_session_1756537974995","tags":["puppeteer-cli","automation","analysis"],"functionName":"main","file":"iteration-001-add.jsonl","line":24,"column":13,"desc":"CLI orchestrator that analyzes logs and plans next iterations","features":["add"],"eventCount":28,"success":true}
+{"level":30,"time":1756537974998,"pid":28727,"hostname":"Gilads-MacBook-Air.local","ts":"2025-08-30T07:12:54.998Z","level":"info","service":"Puppeteer","event":"analysis.iteration.complete","runId":"puppeteer_cli_1756537974995","model":"claude-sonnet-4","sessionId":"cli_session_1756537974995","tags":["puppeteer-cli","automation","analysis"],"functionName":"main","file":"iteration-002-subtract.jsonl","line":24,"column":13,"desc":"CLI orchestrator that analyzes logs and plans next iterations","features":["add","subtract"],"eventCount":48,"success":true}
+{"level":30,"time":1756537974999,"pid":28727,"hostname":"Gilads-MacBook-Air.local","ts":"2025-08-30T07:12:54.999Z","level":"info","service":"Puppeteer","event":"analysis.iteration.complete","runId":"puppeteer_cli_1756537974995","model":"claude-sonnet-4","sessionId":"cli_session_1756537974995","tags":["puppeteer-cli","automation","analysis"],"functionName":"main","file":"iteration-003-statistics.jsonl","line":24,"column":13,"desc":"CLI orchestrator that analyzes logs and plans next iterations","features":["add","subtract","statistics"],"eventCount":58,"success":true}
+{"level":30,"time":1756537974999,"pid":28727,"hostname":"Gilads-MacBook-Air.local","ts":"2025-08-30T07:12:54.999Z","level":"info","service":"Puppeteer","event":"analysis.complete","runId":"puppeteer_cli_1756537974995","model":"claude-sonnet-4","sessionId":"cli_session_1756537974995","tags":["puppeteer-cli","automation","analysis"],"functionName":"main","file":"/Users/giladkoch/Documents/Dev/puppeteer/dist/puppeteer-cli/index.js","line":24,"column":13,"desc":"CLI orchestrator that analyzes logs and plans next iterations","codeSnippet":"    21 |     (0, puppeteer_logger_1.puppeteerLog)(\"cli.start\", { command, target });\n    22 |     switch (command) {\n    23 |         case \"analyze\":\n>   24 |             analyzeIterations(target);\n    25 |             break;\n    26 |         case \"plan\":\n    27 |             planNextIteration(target);","totalIterations":3,"totalFeatures":3,"recommendedNext":["variance","median"]}
+{"level":30,"time":1756537975000,"pid":28727,"hostname":"Gilads-MacBook-Air.local","ts":"2025-08-30T07:12:55.000Z","level":"info","service":"Puppeteer","event":"cli.complete","runId":"puppeteer_cli_1756537974995","model":"claude-sonnet-4","sessionId":"cli_session_1756537974995","tags":["puppeteer-cli","automation","analysis"],"file":"/Users/giladkoch/Documents/Dev/puppeteer/dist/puppeteer-cli/index.js","line":144,"column":5,"command":"analyze"}

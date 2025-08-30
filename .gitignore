@@ -35,3 +35,6 @@ coverage/
 # Cache
 .cache/
 .parcel-cache/
+
+# Generated Puppeteer systems
+**/*-puppeteer/
