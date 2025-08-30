@@ -163,6 +163,34 @@ The system follows the **Log-Driven Development** pattern:
 4. **Generate** new features based on captured insights
 5. **Iterate** continuously with log-guided development
 
+## Backend Integration (Planned)
+
+### LLM Puppeteer Service
+The system is designed to work with a backend service that enables LLM agents to interact with CLI requests:
+
+- **Remote CLI Execution** - LLMs can invoke CLI commands through API endpoints
+- **Event Streaming** - Real-time log events streamed to connected LLM agents  
+- **Schema Synchronization** - Auto-sync generated Zod schemas with backend validation
+- **Agent Orchestration** - Multiple LLM agents can coordinate through shared puppeteer instances
+
+### API Endpoints (Planned)
+```typescript
+POST /cli/setup          // Generate new puppeteer system
+POST /cli/analyze        // Analyze captured logs  
+POST /cli/plan          // Plan next development iteration
+GET  /events/stream     // WebSocket for real-time events
+POST /events/validate   // Validate events against schemas
+```
+
+### Agent Integration Flow
+1. **LLM Agent** requests puppeteer setup via API
+2. **Backend Service** executes CLI and returns generated system
+3. **Puppeteer Events** stream to agent for real-time analysis
+4. **Agent** uses captured patterns to plan and execute next steps
+5. **Continuous Loop** of analysis → planning → generation → capture
+
+This enables true **LLM-driven development** where AI agents use the puppeteer system to iteratively improve code based on captured execution patterns.
+
 ## License
 
 ISC
