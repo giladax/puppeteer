@@ -1,0 +1,45 @@
+{
+  "name": "puppeteer-logger",
+  "version": "1.0.0",
+  "description": "Production-grade focused logger for Puppeteer with JSDoc integration",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && ts-node scripts/gen-logdoc.ts",
+    "dev": "tsc -w",
+    "gen-logdoc": "ts-node scripts/gen-logdoc.ts",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "format": "prettier --write src/**/*.ts",
+    "format:check": "prettier --check src/**/*.ts",
+    "typecheck": "tsc --noEmit",
+    "ci": "npm run typecheck && npm run lint && npm run test"
+  },
+  "keywords": ["puppeteer", "logging", "pino", "typescript"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "pino": "^9.9.0",
+    "source-map-support": "^0.5.21"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.41.0",
+    "@typescript-eslint/parser": "^8.41.0",
+    "eslint": "^9.34.0",
+    "jest": "^30.1.1",
+    "prettier": "^3.6.2",
+    "ts-jest": "^29.4.1",
+    "ts-morph": "^26.0.0",
+    "typescript": "^5.9.2"
+  }
+}
